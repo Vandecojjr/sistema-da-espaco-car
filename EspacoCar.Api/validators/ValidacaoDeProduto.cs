@@ -17,7 +17,7 @@ namespace EspacoCar.Api.validators
                 .IsGreaterOrEqualsThan(produto.Estoque, 0, "Estoque", "O estoque não deve ser negativo")
                 .IsGreaterOrEqualsThan(produto.Preco, 0, "Preco", "O preco não deve ser negativo")
                 .IsGreaterOrEqualsThan(produto.Custo, 0, "Custo", "O preco não deve ser negativo")
-                .AreEquals(produto.CategoriaId, Guid.Empty, "CategoriaId", "A categoria deve ser informada");
+                .AreNotEquals(produto.CategoriaId, Guid.Empty, "CategoriaId", "A categoria deve ser informada");
         }
     }
 }

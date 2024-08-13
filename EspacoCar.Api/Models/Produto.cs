@@ -19,6 +19,7 @@ namespace EspacoCar.Api.Models
 
 
         public Guid Id { get; private set; }
+        public int Numero { get; private set; }
         public string Nome { get; private set; }
         public int Estoque { get; private set; }
         public decimal Preco { get; private set; }
