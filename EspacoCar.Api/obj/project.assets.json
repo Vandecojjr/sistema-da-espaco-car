@@ -46,6 +46,15 @@
           }
         }
       },
+      "Flunt/2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/8.0.1": {
         "type": "package",
         "dependencies": {
@@ -1136,6 +1145,19 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Flunt/2.0.5": {
+      "sha512": "CMgq8FUYjkHzyZT3PhkUwZyy79mudON+EL4b0SAT7BfIOJ2CNypwnbdA0cPHAM2CYQfO2L8ubNJCiBHQOIv2pA==",
+      "type": "package",
+      "path": "flunt/2.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "flunt.2.0.5.nupkg.sha512",
+        "flunt.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/Flunt.dll"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/8.0.1": {
@@ -3193,7 +3215,8 @@
     "net8.0": [
       "Microsoft.AspNetCore.OpenApi >= 8.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.8",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "flunt >= 2.0.5"
     ]
   },
   "packageFolders": {
@@ -3246,6 +3269,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.4.0, )"
+          },
+          "flunt": {
+            "target": "Package",
+            "version": "[2.0.5, )"
           }
         },
         "imports": [

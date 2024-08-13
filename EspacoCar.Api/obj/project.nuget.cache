@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Oh+RDqx8S8K0wxdJkLCORWjgNhELmNdpfbVA0fcTlbGOXMWlPgTMf5xBGMQeprcasTJQ+X17ue4siPx2S1hxkA==",
+  "dgSpecHash": "kiwdx3j1MFIA2rGFN3JwOrsl9/sB6aA4XK1jOhS9CExI3rcHvbA4g9DhDWN8p1Azk+cYH1oyHnVFOXXrX9N5Og==",
   "success": true,
   "projectFilePath": "C:\\dev\\sistema-da-espaco-car\\EspacoCar.Api\\EspacoCar.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vanderlei\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Vanderlei\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\Vanderlei\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
     "C:\\Users\\Vanderlei\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.1\\microsoft.aspnetcore.openapi.8.0.1.nupkg.sha512",
     "C:\\Users\\Vanderlei\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Vanderlei\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

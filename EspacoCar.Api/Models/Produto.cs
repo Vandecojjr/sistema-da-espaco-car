@@ -1,26 +1,28 @@
-using System.ComponentModel.DataAnnotations;
-using Microsoft.EntityFrameworkCore;
+using EspacoCar.Api.validators;
+using Flunt.Notifications;
 
 namespace EspacoCar.Api.Models
 {
-    public class Produto
+    public class Produto : Notifiable<Notification>
     {
-        public Produto(int numero, string nome, int estoque, decimal preco, decimal precoDeCusto, Guid categoriaId)
+        public Produto(string nome, int estoque, decimal preco, decimal custo, Guid categoriaId)
         {
-            Numero = numero;
+            Id = Guid.NewGuid();
             Nome = nome;
             Estoque = estoque;
             Preco = preco;
-            PrecoDeCusto = precoDeCusto;
+            Custo = custo;
             CategoriaId = categoriaId;
+
+            AddNotifications(new ValidacaoDeProduto(this));
         }
 
-        public Guid Id { get { return Guid.NewGuid(); } }
-        public int Numero { get; private set; }
+
+        public Guid Id { get; private set; }
         public string Nome { get; private set; }
         public int Estoque { get; private set; }
         public decimal Preco { get; private set; }
-        public decimal PrecoDeCusto { get; private set; }
+        public decimal Custo { get; private set; }
         public Guid CategoriaId { get; private set; }
         public Categoria Categoria { get; private set; }
     }
