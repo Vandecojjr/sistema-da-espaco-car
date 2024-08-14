@@ -13,14 +13,14 @@ namespace EspacoCar.Tests.Models.Testes
         [TestMethod]
         public void CategoriaValida()
         {
-            var categoria = new Categoria("Teste");
+            var categoria = new CategoriaDeProduto("Teste");
             Assert.IsTrue(categoria.IsValid);
         }
 
         [TestMethod]
         public void CategorIniaValida()
         {
-            var categoria = new Categoria("");
+            var categoria = new CategoriaDeProduto("");
             Assert.IsFalse(categoria.IsValid);
         }
     }

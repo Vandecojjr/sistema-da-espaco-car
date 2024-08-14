@@ -3,9 +3,9 @@ using Flunt.Validations;
 
 namespace EspacoCar.Api.validators
 {
-    public class ValidacaoDeCategoria : Contract<Categoria>
+    public class ValidacaoDeCategoria : Contract<CategoriaDeProduto>
     {
-        public ValidacaoDeCategoria(Categoria categoria)
+        public ValidacaoDeCategoria(CategoriaDeProduto categoria)
         {
             Requires()
                 .IsNotNullOrEmpty(categoria.Nome, "Nome", "O nome da categoria deve ser informado")

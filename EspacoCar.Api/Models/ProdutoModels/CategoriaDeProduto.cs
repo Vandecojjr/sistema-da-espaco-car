@@ -3,9 +3,9 @@ using Flunt.Notifications;
 
 namespace EspacoCar.Api.Models
 {
-    public class Categoria : Notifiable<Notification>
+    public class CategoriaDeProduto : Notifiable<Notification>
     {
-        public Categoria(string nome)
+        public CategoriaDeProduto(string nome)
         {
             Id = Guid.NewGuid();
             Nome = nome;
