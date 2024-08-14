@@ -1,3 +1,4 @@
+using EspacoCar.Api.Models.ProdutoModels;
 using EspacoCar.Api.validators;
 using Flunt.Notifications;
 
@@ -26,5 +27,7 @@ namespace EspacoCar.Api.Models
         public decimal Custo { get; private set; }
         public Guid CategoriaId { get; private set; }
         public CategoriaDeProduto Categoria { get; private set; }
+        public virtual ICollection<SaidaDeProduto> SaidaDeProduto { get; private set; }
+        public virtual ICollection<EntradaDeProduto> EntradaDeProduto { get; private set; }
     }
 }

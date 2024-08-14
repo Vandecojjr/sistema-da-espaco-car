@@ -15,5 +15,6 @@ namespace EspacoCar.Api.Models
 
         public Guid Id { get; private set; }
         public string Nome { get; private set; }
+        public virtual ICollection<Produto> Produtos { get; set; }
     }
 }
