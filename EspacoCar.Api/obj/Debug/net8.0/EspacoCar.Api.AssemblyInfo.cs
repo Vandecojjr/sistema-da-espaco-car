@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EspacoCar.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81dbd2d25a2fb29fa9c59d010189a87e4da8b2a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eecb805758b582b1eac8d00782795ab2cf16aafc")]
 [assembly: System.Reflection.AssemblyProductAttribute("EspacoCar.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EspacoCar.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

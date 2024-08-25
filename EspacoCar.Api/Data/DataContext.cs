@@ -18,8 +18,6 @@ namespace EspacoCar.Api.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
             modelBuilder.Ignore<Notification>();
             ConfigurarProdutos(modelBuilder);
             ConfigurarCategorias(modelBuilder);

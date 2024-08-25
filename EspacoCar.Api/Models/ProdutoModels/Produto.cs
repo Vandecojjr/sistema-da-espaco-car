@@ -18,7 +18,6 @@ namespace EspacoCar.Api.Models
             AddNotifications(new ValidacaoDeProduto(this));
         }
 
-
         public Guid Id { get; private set; }
         public int Numero { get; private set; }
         public string Nome { get; private set; }

@@ -13,6 +13,7 @@ namespace EspacoCar.Api.Data
             modelBuilder.Entity<CategoriaDeProduto>()
                 .Property(categoria => categoria.Nome)
                 .HasMaxLength(50)
+                .HasColumnType("varchar(50)")
                 .IsRequired();
 
             modelBuilder.Entity<CategoriaDeProduto>()
