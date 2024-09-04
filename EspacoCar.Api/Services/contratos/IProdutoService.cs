@@ -7,9 +7,9 @@ namespace EspacoCar.Api.Services.contratos
     public interface IProdutoService
     {
         Produto BuscarPorId(Guid id);
-        IEnumerable<Produto> BuscarTodos();
+        ICollection<Produto> BuscarTodos();
         ResultadoGenerico Cadastrar(ProdutoDTO produto);
-        ResultadoGenerico Atualizar(Produto produto);
+        ResultadoGenerico Atualizar(AtualizarProdutoDTO produto);
         ResultadoGenerico Remover(Guid id);
     }
 }

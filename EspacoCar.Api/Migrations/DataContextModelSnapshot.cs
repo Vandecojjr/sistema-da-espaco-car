@@ -60,7 +60,10 @@ namespace EspacoCar.Api.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<int>("Numero")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Numero"));
 
                     b.Property<decimal>("Preco")
                         .HasPrecision(10, 2)

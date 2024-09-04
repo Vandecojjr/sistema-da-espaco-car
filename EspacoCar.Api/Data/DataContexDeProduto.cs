@@ -11,6 +11,10 @@ namespace EspacoCar.Api.Data
                 .HasKey(produto => produto.Id);
 
             modelBuilder.Entity<Produto>()
+                .Property(produto => produto.Numero)
+                .UseIdentityColumn(seed: 1, increment: 1);
+
+            modelBuilder.Entity<Produto>()
                 .HasIndex(produto => produto.Numero)
                 .IsUnique();
 

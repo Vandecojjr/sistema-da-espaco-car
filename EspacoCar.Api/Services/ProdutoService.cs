@@ -30,19 +30,27 @@ namespace EspacoCar.Api.Services
             return _repositorio.BuscarPorId(id);
         }
 
-        public IEnumerable<Produto> BuscarTodos()
+        public ICollection<Produto> BuscarTodos()
         {
-            throw new NotImplementedException();
+            return _repositorio.BuscarTodos();
         }
 
-        public ResultadoGenerico Atualizar(Produto produto)
+        public ResultadoGenerico Atualizar(AtualizarProdutoDTO produtoDTO)
         {
-            throw new NotImplementedException();
+            var produto = _repositorio.BuscarPorId(produtoDTO.Id);
+            produto.Atualizar(produtoDTO);
+
+            if (!produto.IsValid)
+                return new ResultadoGenerico(false, "Ocorreu um erro ao atualizar o produto", produto.Notifications);
+
+            _repositorio.Atualizar(produto);
+            return new ResultadoGenerico(true, "Atualizado com sucesso", produto);
         }
 
         public ResultadoGenerico Remover(Guid id)
         {
-            throw new NotImplementedException();
+            _repositorio.Deletar(id);
+            return new ResultadoGenerico(true, "Removido com sucesso", null);
         }
 
 

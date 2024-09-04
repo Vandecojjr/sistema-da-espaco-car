@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EspacoCar.Api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240904131933_InitialCreate")]
+    [Migration("20240904153806_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -63,7 +63,10 @@ namespace EspacoCar.Api.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<int>("Numero")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Numero"));
 
                     b.Property<decimal>("Preco")
                         .HasPrecision(10, 2)

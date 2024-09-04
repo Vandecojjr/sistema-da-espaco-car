@@ -30,5 +30,29 @@ namespace EspacoCar.Api.Controllers
         {
             return _service.BuscarPorId(id);
         }
+
+        [HttpGet]
+        [Route("")]
+        public ActionResult<List<Produto>> BuscarTodos()
+        {
+            return _service.BuscarTodos().ToList();
+        }
+
+        [HttpPut]
+        [Route("{id}")]
+        public ActionResult<ResultadoGenerico> Atualizar(Guid id, [FromBody] AtualizarProdutoDTO produto)
+        {
+            if (id != produto.Id)
+                return BadRequest();
+
+            return _service.Atualizar(produto);
+        }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public ActionResult<ResultadoGenerico> Deletar(Guid id)
+        {
+            return _service.Remover(id);
+        }
     }
 }

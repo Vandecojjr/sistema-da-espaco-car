@@ -19,22 +19,25 @@ namespace EspacoCar.Api.Repositories
 
         public Produto BuscarPorId(Guid id)
         {
-            return _context.Produtos.AsNoTracking().Where(x => x.Id == id).First();
+            return _context.Produtos.Where(x => x.Id == id).First();
         }
 
         public ICollection<Produto> BuscarTodos()
         {
-            throw new NotImplementedException();
+            return _context.Produtos.AsNoTracking().ToList();
         }
 
         public void Atualizar(Produto produto)
         {
-            throw new NotImplementedException();
+            _context.Entry<Produto>(produto).State = EntityState.Modified;
+            _context.Entry(produto).Property(p => p.Numero).IsModified = false;
+            _context.SaveChanges();
         }
 
         public void Deletar(Guid id)
         {
-            throw new NotImplementedException();
+            _context.Produtos.Remove(BuscarPorId(id));
+            _context.SaveChanges();
         }
     }
 }
