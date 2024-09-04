@@ -27,7 +27,7 @@ namespace EspacoCar.Api.Repositories
 
         public void Cadastrar(SaidaDeProduto entrada)
         {
-            throw new NotImplementedException();
+            return;
         }
 
         public void Deletar(Guid id)

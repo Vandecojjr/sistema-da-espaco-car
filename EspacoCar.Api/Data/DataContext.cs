@@ -8,7 +8,7 @@ namespace EspacoCar.Api.Data
     public partial class DataContext : DbContext
     {
         public DbSet<Produto> Produtos { get; set; }
-        public DbSet<CategoriaDeProduto> Categorias { get; set; }
+        public DbSet<CategoriaDeProduto> CategoriaDeProdutos { get; set; }
         public DbSet<SaidaDeProduto> SaidaDeProdutos { get; set; }
         public DbSet<EntradaDeProduto> EntradaDeProdutos { get; set; }
 

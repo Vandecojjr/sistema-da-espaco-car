@@ -25,8 +25,8 @@ namespace EspacoCar.Api.Models
         public decimal Preco { get; private set; }
         public decimal Custo { get; private set; }
         public Guid CategoriaId { get; private set; }
-        public CategoriaDeProduto Categoria { get; private set; }
-        public virtual ICollection<SaidaDeProduto> SaidaDeProduto { get; private set; }
-        public virtual ICollection<EntradaDeProduto> EntradaDeProduto { get; private set; }
+        public virtual CategoriaDeProduto Categoria { get; private set; }
+        public ICollection<SaidaDeProduto> SaidaDeProduto { get; private set; }
+        public ICollection<EntradaDeProduto> EntradaDeProduto { get; private set; }
     }
 }

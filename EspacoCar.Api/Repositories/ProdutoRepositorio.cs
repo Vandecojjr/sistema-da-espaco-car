@@ -1,6 +1,7 @@
 using EspacoCar.Api.Data;
 using EspacoCar.Api.Models;
 using EspacoCar.Api.Repositories.Contratos;
+using Microsoft.EntityFrameworkCore;
 
 namespace EspacoCar.Api.Repositories
 {
@@ -10,14 +11,15 @@ namespace EspacoCar.Api.Repositories
         {
         }
 
-        public void Atualizar(Produto produto)
+        public void Cadastrar(Produto novoProduto)
         {
-            throw new NotImplementedException();
+            _context.Add(novoProduto);
+            _context.SaveChanges();
         }
 
         public Produto BuscarPorId(Guid id)
         {
-            throw new NotImplementedException();
+            return _context.Produtos.AsNoTracking().Where(x => x.Id == id).First();
         }
 
         public ICollection<Produto> BuscarTodos()
@@ -25,7 +27,7 @@ namespace EspacoCar.Api.Repositories
             throw new NotImplementedException();
         }
 
-        public void Cadastrar(Produto novoProduto)
+        public void Atualizar(Produto produto)
         {
             throw new NotImplementedException();
         }
