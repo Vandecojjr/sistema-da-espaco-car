@@ -53,6 +53,18 @@ namespace EspacoCar.Api.Services
             return new ResultadoGenerico(true, "Removido com sucesso", null);
         }
 
+        public void AumentarEstoque(Guid id, int quantidade)
+        {
+            var produto = _repositorio.BuscarPorId(id);
+            produto.AumentarEstoque(quantidade);
+            _repositorio.Atualizar(produto);
+        }
 
+        public void DiminuirEstoque(Guid id, int quantidade)
+        {
+            var produto = _repositorio.BuscarPorId(id);
+            produto.DiminuirEstoque(quantidade);
+            _repositorio.Atualizar(produto);
+        }
     }
 }

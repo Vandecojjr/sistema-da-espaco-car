@@ -11,5 +11,7 @@ namespace EspacoCar.Api.Services.contratos
         ResultadoGenerico Cadastrar(ProdutoDTO produto);
         ResultadoGenerico Atualizar(AtualizarProdutoDTO produto);
         ResultadoGenerico Remover(Guid id);
+        void AumentarEstoque(Guid id, int quantidade);
+        void DiminuirEstoque(Guid id, int quantidade);
     }
 }

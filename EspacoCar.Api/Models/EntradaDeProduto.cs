@@ -5,5 +5,6 @@ namespace EspacoCar.Api.Models.ProdutoModels
         public EntradaDeProduto(int quantidade, Guid produtoId) : base(quantidade, produtoId)
         {
         }
+
     }
 }
